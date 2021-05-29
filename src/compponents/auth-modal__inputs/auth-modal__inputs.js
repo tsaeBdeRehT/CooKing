@@ -1,6 +1,6 @@
 import React from "react";
 
-const ModalInputs = ({name}) => {
+const AuthModalInputs = ({name}) => {
     return (
       <div className="mb-3 mt-3 container">
           <input className="form-control mb-3" placeholder="Логин"/>
@@ -16,4 +16,4 @@ const ModalInputs = ({name}) => {
 }
 
 
-export default ModalInputs
+export default AuthModalInputs

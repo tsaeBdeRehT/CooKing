@@ -1,12 +1,13 @@
 import './app.css';
-import FilterBar from "../filter-bar/filter-bar";
+
 import Header from "../header/header";
+import Main from "../recipes/recipes";
 
 function App() {
   return (
     <div className="App">
         <Header/>
-        <FilterBar/>
+        <Main/>
     </div>
   );
 }

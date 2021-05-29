@@ -1,8 +1,8 @@
 import React from "react";
 import './auth-modal__content.css';
-import ModalInputs from "../auth-modal__content__inputs/auth-modal__content__inputs";
+import AuthModalInputs from "../auth-modal__inputs/auth-modal__inputs";
 
-function AuthModal__Content() {
+function AuthModalContent() {
     return (
         <div className="auth-modal__content modal-body">
             <ul className="nav nav-tabs" id="myTab" role="tablist">
@@ -19,14 +19,14 @@ function AuthModal__Content() {
             </ul>
             <div className="tab-content" id="myTabContent">
                 <div className="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-                    <ModalInputs name = 'Войти'/>
+                    <AuthModalInputs name = 'Войти'/>
                 </div>
                 <div className="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-                    <ModalInputs name = "Зарегистрироваться"/>
+                    <AuthModalInputs name = "Зарегистрироваться"/>
                 </div>
             </div>
         </div>
     );
 }
 
-export default AuthModal__Content;
+export default AuthModalContent;

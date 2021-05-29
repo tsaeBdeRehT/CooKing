@@ -1,45 +1,27 @@
-import React from "react";
-import Recipes from "../recipes/recipes";
+import { NavLink } from 'react-router-dom';
+
 
 const FilterBar = () =>{
     return(
-        <div>
-            <ul className="nav nav-tabs nav-fill" id="myTab" role="tablist">
-                <li className="nav-item" role="presentation">
-                    <button className="nav-link active" id="new-tab" data-bs-toggle="tab" data-bs-target="#home"
-                            type="button" role="tab" aria-controls="home" aria-selected="true">Новые
-                    </button>
+        <nav className="navigation container">
+            <ul className="nav nav-tabs">
+                <li className="nav-item">
+                    <NavLink className="nav-link" to="/" exact={ true }>Популярные</NavLink>
                 </li>
-                <li className="nav-item" role="presentation">
-                    <button className="nav-link" id="popular-tab" data-bs-toggle="tab" data-bs-target="#profile"
-                            type="button" role="tab" aria-controls="profile" aria-selected="false">Популярные
-                    </button>
+                <li className="nav-item">
+                    <NavLink className="nav-link" to="/new">Новые</NavLink>
                 </li>
-                <li className="nav-item" role="presentation">
-                    <button className="nav-link" id="short-tab" data-bs-toggle="tab" data-bs-target="#contact"
-                            type="button" role="tab" aria-controls="contact" aria-selected="false">До 30 минут
-                    </button>
+                <li className="nav-item">
+                    <NavLink className="nav-link" to="/fast">До 30 минут</NavLink>
                 </li>
-                <li className="nav-item" role="presentation">
-                    <button className="nav-link" id="middle-tab" data-bs-toggle="tab" data-bs-target="#contact"
-                            type="button" role="tab" aria-controls="contact" aria-selected="false">До часа
-                    </button>
+                <li className="nav-item">
+                    <NavLink className="nav-link" to="/medium" tabIndex="-1" aria-disabled="true">До часа</NavLink>
                 </li>
-                <li className="nav-item" role="presentation">
-                    <button className="nav-link" id="long-tab" data-bs-toggle="tab" data-bs-target="#contact"
-                            type="button" role="tab" aria-controls="contact" aria-selected="false">От часа
-                    </button>
+                <li className="nav-item">
+                    <NavLink className="nav-link" to="/long" tabIndex="-1" aria-disabled="true">От часа</NavLink>
                 </li>
             </ul>
-            <div className="tab-content" id="myTabContent">
-                <div className="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="new-tab"><Recipes/>
-                </div>
-                <div className="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="popular-tab"><Recipes/></div>
-                <div className="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="short-tab">...</div>
-                <div className="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="middle-tab">...</div>
-                <div className="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="long-tab">...</div>
-            </div>
-        </div>
+        </nav>
     );
 }
 
